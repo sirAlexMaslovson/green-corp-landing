@@ -200,4 +200,12 @@ body {
     margin-bottom: 15px;
   }
 
+  .about__info a {
+    color: #fff;
+  }
+
+  .about div {
+    animation-duration: 2s;
+  }
+
   
