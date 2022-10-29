@@ -36,12 +36,12 @@ document.querySelector('#budget').addEventListener('change', function handleSele
       input.type = "text"; // Задание 2
         
       formContainer.appendChild(input);
-      document.querySelector('#form form').append(formContainer, document.querySelector('.form__submit')); // Задание 3
+      document.querySelector('.form form').append(formContainer, document.querySelector('.form__submit')); // Задание 3
     }
    
     const otherInput = document.querySelector('.form__other-input');
     if (event.target.value !== 'other' && otherInput) { // Задание 5
-    document.querySelector('#form form').removeChild(otherInput); // Задание 4
+    document.querySelector('.form form').removeChild(otherInput); // Задание 4
     }
   });
 
@@ -54,14 +54,14 @@ document.querySelector('#budget').addEventListener('change', function handleSele
       document.querySelector('header').classList.remove('header__scrolled');
     }
    
-
+ 
     let windowBottomPosition = window.scrollY + window.innerHeight;
     let countElementPosition = document.querySelector('.features__clients-count').offsetTop;
     if (windowBottomPosition >= countElementPosition && !animationInited) {
       animationInited = true;
       initIncreaseNumberAnimation();
-    }
+    } 
   }
-   
+  let animationInited = false;
   window.addEventListener('scroll', updateScroll);
  
